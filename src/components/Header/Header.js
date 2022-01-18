@@ -21,17 +21,25 @@ const Header = () => {
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
+        <div></div>
       </MainHeader>
     </header>
   );
 };
 
 const MainHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  display: flex;
+  gap: 40px;
+  margin: 20px 0;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;
