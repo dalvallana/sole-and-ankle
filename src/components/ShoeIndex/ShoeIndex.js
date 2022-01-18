@@ -45,20 +45,22 @@ const ShoeIndex = ({ sortId, setSortId }) => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  gap: 20px;
+  align-items: baseline;
+  gap: 32px;
 `;
 
 const LeftColumn = styled.div`
-  flex: 1 0 0;
+  flex: 0 0 248px;
 `;
 
 const MainColumn = styled.div`
-  flex: 4 0 0;
+  flex: 1;
 `;
 
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `;
 
 const Title = styled.h2`

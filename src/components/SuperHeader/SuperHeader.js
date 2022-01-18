@@ -24,9 +24,10 @@ const SuperHeader = () => {
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   gap: 20px;
-  padding: 8px 32px;
+  height: 40px;
+  padding: 0 32px;
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
@@ -34,7 +35,7 @@ const Wrapper = styled.div`
 
 const MarketingMessage = styled.span`
   color: ${COLORS.white};
-  flex: 2;
+  margin-right: auto;
 `;
 
 const HelpLink = styled.a`

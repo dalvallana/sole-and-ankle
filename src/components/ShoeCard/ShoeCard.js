@@ -45,7 +45,7 @@ const ShoeCard = ({
         <Spacer size={12} />
         <Row>
           <Name>{name}</Name>
-          <Price>{formatPrice(price)}</Price>
+          <Price isOnSale={isOnSale}>{formatPrice(price)}</Price>
         </Row>
         <Row>
           <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
@@ -71,7 +71,7 @@ const ImageWrapper = styled.div`
 const Label = styled.div`
   position: absolute;
   padding: 5px;
-  background-color: ${p => p.isOnSale ? '#C5295D' : '#6868D9'};
+  background-color: ${p => p.isOnSale ? COLORS.primary : COLORS.secondary};
   border-radius: 3px;
   color: #fff;
   font-size: 0.8rem;
@@ -81,7 +81,7 @@ const Label = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  width: 100%;
   border-radius: 20px 20px 5px 5px;
 `;
 
@@ -96,7 +96,10 @@ const Name = styled.h3`
   color: ${COLORS.gray[900]};
 `;
 
-const Price = styled.span``;
+const Price = styled.span`
+  color: ${p => p.isOnSale ? COLORS.gray[700] : null};
+  text-decoration: ${p => p.isOnSale ? 'line-through' : null};
+`;
 
 const ColorInfo = styled.p`
   color: ${COLORS.gray[700]};
